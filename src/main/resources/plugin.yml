@@ -1,0 +1,13 @@
+name: Armory
+version: '${project.version}'
+main: org.garper.plugins.armory.Main
+api-version: 1.16
+commands:
+  artillery:
+    description: launch an artilley strike
+    usage: /<command>
+    aliases: [art]
+  horse:
+    description: spawn a horse
+    usage: /<command>
+    aliases: [ horse ]

@@ -5,6 +5,14 @@ body, html {
     background: #2e2e2e;
 }
 
+b {
+    color: #c9ada7;
+}
+
+a {
+    color: #8080ff;
+}
+
 #name {
     display: flex;
     flex-direction: column;
