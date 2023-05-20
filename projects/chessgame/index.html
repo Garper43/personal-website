@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css"> 
+        <title>Chad-Chess</title>
+    </head>
+
+    <body>
+        <div id="name" >
+            <h1>   
+                 __  __ __    ___  _____ _____      ____   ____  ___ ___    ___ 
+                /  ]|  |  |  /  _]/ ___// ___/     /    | /    ||   |   |  /  _]
+               /  / |  |  | /  [_(   \_(   \_     |   __||  o  || _   _ | /  [_ 
+              /  /  |  _  ||    _]\__  |\__  |    |  |  ||     ||  \_/  ||    _]
+             /   \_ |  |  ||   [_ /  \ |/  \ |    |  |_ ||  _  ||   |   ||   [_ 
+             \     ||  |  ||     |\    |\    |    |     ||  |  ||   |   ||     |
+              \____||__|__||_____| \___| \___|    |___,_||__|__||___|___||_____|
+                                                                                 
+            </h1>
+        </div>
+
+        <div id="article" >
+            <p>
+                Chess Game is a group project where I contributed the chess logic and some of the front-end (namely the actual game page, login page and lobby page)
+
+                <img src="../../assets/chad-chess.png" >
+
+                <b>Designing the logic</b>
+                I saw my classmates struggle with the logic for ~5 months. So when my team was assigned to work on our own version of the chess game I knew that it was crucial to design the logic in a way that would utilize OOP in a way that would allow me to reuse as much logic as possible for as many pieces as possible.
+
+                <b>ChessBoard</b>
+                I knew that I would need to start with a class that would serve as the chess chess board. I wanted this class to store the state of the board and handle all the moves. It would also be the first layer of abstraction towards move validation.
+
+                <b>Storing board state</b>
+                I decided to have the ChessBoard store a 2D array of Piece objects to represent the state of the board. The pieces themselves wouldn't store any information regarding their position on the board. Instead, the board would pass the piece methods it's position as a parameter. It would also pass itself as a paramer so that the piece could still check certain squares on the board. The reason that the pieces don't store their position is because storing the same information in two different objects is generally a bad practive and could potentially introduce many unnecesary bugs.
+
+                <b>Color & V2</b>
+                These are just some utility classes
+                Color stores enums that represent a piece's color.
+                And V2 is short for 2D vector. It'll be used to help methods communicate a piece's position.
+
+                <b>Piece</b>
+                Piece is an abstract class that defines the interface for each piece in the game.
+                <img src="../../assets/piece-overview.png" >
+            </p>
+        </div>
+    </body>
+</html>
