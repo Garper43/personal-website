@@ -42,6 +42,15 @@ b {
     white-space: pre-line;
 }
 
+#article ul {
+    color: #f2e9e4;
+    font-family: Monospace;
+    font-size: 1.7em;
+    line-height: 1.7em;
+    padding-left: 4em;
+    margin: 0em 0em
+}
+
 #article img {
     width: 100%;
 }

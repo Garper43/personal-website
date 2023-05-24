@@ -43,6 +43,16 @@
                 <b>Piece</b>
                 Piece is an abstract class that defines the interface for each piece in the game.
                 <img src="../../assets/piece-overview.png" >
+                It has a few important methods that are already implemented:
+            </p>
+            <ul>
+                <li><i>validateMove(V2, V2, ChessBoard): boolean</i></li>
+                Checks whether the piece is allowed to move to a certain field. Automatically checks for attacks too
+                <li><i>validateAttackVector(V2, V2, ChessBoard): boolean</i></li>
+                Checks whether the piece is allowed to attack a piece in a certain field.
+            </ul>
+            <p>
+                These methods contain universal rules for piece movements. These rules are however affected by the implementing class. A class that extends the Piece class has to implement the abstract classes to specify the pieces' unique behaviours. For example, it specifies the relative distance that a piece can travel, attack, whether the piece can go diagonally or in a straight line. Some pieces can also override some methods pertaining to special moves to specify their special move logic.
             </p>
         </div>
     </body>
