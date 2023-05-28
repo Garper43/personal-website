@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
     margin: 0px;
     width: 100%;
@@ -8,6 +10,13 @@ body {
 
 b {
     color: #c9ada7;
+}
+
+i {
+    background-color: #825555;
+    border-radius: 0.1em;
+    color: #f2e9e4;
+    padding: 0em 0.2em;
 }
 
 #name {
@@ -29,7 +38,7 @@ b {
     align-items: center;
 }
 
-#article > * {
+#article img, #article p, #article ul {
     width: 40em;
 }
 
@@ -53,4 +62,28 @@ b {
 
 #article img {
     width: 100%;
+}
+
+/* green button */
+.green-btn8 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    transition: all 200ms;
+    padding: 0.7em;
+    border: #141414 solid 0.2em;
+    background-color: #c7eb88;;
+    box-shadow: #2c2b2b 0.4em 0.4em;
+    position: relative;
+    margin: 0.7em;
+    text-decoration: none;
+    width: max-content;
+}
+
+.green-btn8:hover {
+    translate: 0.2em 0.2em;
+    box-shadow: #141414 0.2em 0.2em;
+}
+
+.green-btn8:visited {
+    color: #141414;
 }

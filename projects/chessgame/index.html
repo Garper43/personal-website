@@ -30,18 +30,18 @@
                 I saw my classmates struggle with the logic for ~5 months. So when my team was assigned to work on our own version of the chess game I knew that it was crucial to design the logic in a way that would utilize OOP in a way that would allow me to reuse as much logic as possible for as many pieces as possible.
 
                 <b>ChessBoard</b>
-                I knew that I would need to start with a class that would serve as the chess chess board. I wanted this class to store the state of the board and handle all the moves. It would also be the first layer of abstraction towards move validation.
+                I knew that I would need to start with a class that would serve as the chess board. I wanted this class to store the state of the board and handle all the moves. It would also be the first layer of abstraction towards move validation.
 
                 <b>Storing board state</b>
-                I decided to have the ChessBoard store a 2D array of Piece objects to represent the state of the board. The pieces themselves wouldn't store any information regarding their position on the board. Instead, the board would pass the piece methods it's position as a parameter. It would also pass itself as a paramer so that the piece could still check certain squares on the board. The reason that the pieces don't store their position is because storing the same information in two different objects is generally a bad practive and could potentially introduce many unnecesary bugs.
+                I decided to have the <i>ChessBoard</i> store a 2D array of Piece objects to represent the state of the board. The pieces themselves wouldn't store any information regarding their position on the board. Instead, the board would pass the piece methods it's position as a parameter. It would also pass itself as a paramer so that the piece could still check certain squares on the board. The reason that the pieces don't store their position is because storing the same information in two different objects is generally a bad practive and could potentially introduce many unnecesary bugs.
 
                 <b>Color & V2</b>
                 These are just some utility classes
-                Color stores enums that represent a piece's color.
-                And V2 is short for 2D vector. It'll be used to help methods communicate a piece's position.
+                <i>Color</i> stores enums that represent a piece's color.
+                And <i>V2</i> is short for 2D vector. It'll be used to help methods communicate a piece's position.
 
                 <b>Piece</b>
-                Piece is an abstract class that defines the interface for each piece in the game.
+                <i>Piece</i> is an abstract class that defines the interface for each piece in the game.
                 <img src="../../assets/piece-overview.png" >
                 It has a few important methods that are already implemented:
             </p>
@@ -53,7 +53,17 @@
             </ul>
             <p>
                 These methods contain universal rules for piece movements. These rules are however affected by the implementing class. A class that extends the Piece class has to implement the abstract classes to specify the pieces' unique behaviours. For example, it specifies the relative distance that a piece can travel, attack, whether the piece can go diagonally or in a straight line. Some pieces can also override some methods pertaining to special moves to specify their special move logic.
+
+                <b>Special moves</b>
+                Special moves were a bit tricky to implement because they all have radically different logic and each one needs it's unique logic code. After some brainstorming, I ended up with the <i>validateSpecial()</i> method that is called from within the <i>ChessBoard.move()</i> method. It returns false by default, but can be overridden by extending classes to add their unique validation logic. The reason it's implemented in the abstract Piece class is just because not every piece has special moves and implementing it in the Piece class helps keep individual piece classes from unnecesary boilerplate.
+
+                When <i>validateSpecial()</i> returns true, the <i>ChessBoard.move()</i> method calls <i>doSpecial()</i> and it does whatever the special move requires. I'm a little unhappy with this implementation because it requires that <i>ChessBoard</i> allows the pieces on the board to be manipulated externally (By <i>doSpecial()</i>)
+
+                <b>Front-end</b>
+                There's not much to say about the front-end. It just works ¯\_(ツ)_/¯
             </p>
+
+            <a class="green-btn8" href="" >PLAY CHAD-CHESS</a>
         </div>
     </body>
 </html>
