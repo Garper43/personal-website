@@ -37,16 +37,16 @@ i {
     font-family: Monospace;
     line-height: 20px;
     font-size: 10px;
-    padding-left: 10em;
+    padding-left: 15em;
     background-color: #121212;
     box-shadow: 0em 0em 5em 0em #00000096;
 }
 
 #name h1 {
-    background-image: linear-gradient(90deg, #84d88d, #4ecdda);
+    background-image: linear-gradient(90deg, #ff9090, #daa34e);
     background-clip: text;
     color: #0000;
-    text-shadow: 0em 0em 1em #00ff7091;
+    text-shadow: 0em 0em 1em #ff6a0091;
     letter-spacing: -0.16em;
     transform: scaleX(1.2);
     width: max-content;
