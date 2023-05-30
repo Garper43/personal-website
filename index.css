@@ -53,6 +53,7 @@ a {
 }
 
 #container {
+    position: relative;
     display: flex;
 }
 
@@ -75,5 +76,13 @@ a {
     line-height: 1.7em;
     margin-left: 1em;
     white-space: pre-line;
+}
+
+#cat {
+    image-rendering: optimizeSpeed;
+    position: absolute;
+    bottom: 0em;
+    right: 5em;
+    width: 10em;
 }
   
