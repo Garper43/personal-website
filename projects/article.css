@@ -107,3 +107,18 @@ i {
 .green-btn8:visited {
     color: #141414;
 }
+
+.fancy-button {
+    font-size: 2em;
+    padding: 1em;
+    background-image: linear-gradient(90deg, #ca5a5a, #f7b145);
+    font-family: Monospace;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.3em;
+    transition: 200ms;
+}
+
+.fancy-button:hover {
+    transform: perspective(500px) translateZ(20px);
+}
