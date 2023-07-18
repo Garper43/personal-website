@@ -32,7 +32,7 @@ i {
 
 #name {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     white-space: pre;
     font-family: Monospace;
     line-height: 20px;
@@ -82,6 +82,16 @@ i {
 
 #article img {
     width: 100%;
+}
+
+#project-github-link {
+    position: relative;
+    left: 5em;
+    bottom: -15em
+}
+
+#project-github-link img {
+    height: 5em;
 }
 
 /* green button */
