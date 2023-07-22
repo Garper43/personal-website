@@ -27,7 +27,53 @@
 
                 <img src="../../assets/gradient.png" >
 
+                <b>Usage</b>
                 You start by building the shape that you want to paint into a gradient.
+
+                You then use the following command to create a gradient:
+                <i>/grad &lt;pattern&gt; &lt;blur&gt; [drippage] [-i]</i>
+
+
+                <i>&lt;pattern&gt;</i> sets the blocks/colors that will be used in the gradient
+                
+                <img src="../../assets/gradient-pattern.png" >
+
+
+
+                <i>&lt;blur&gt;</i> decides how much the pattern will be blurred
+                
+                <img src="../../assets/gradient-blur.png" >
+                
+
+                
+                <i>[drippage]</i> decides how much each vertical splice can be randomly shifted vertically
+                
+                <img src="../../assets/gradient-drippage.png" >
+
+
+
+                Here you can see what it looks like if you combine <i>&lt;blur&gt;</i> and <i>[drippage]</i>:
+
+                <img src="../../assets/gradient-complete.png" >
+
+
+
+                <b>Technicalities</b>
+                Here is the formula that is being used to determine what block to place in a certain place:
+                
+                <img id="formula" src="../../assets/gradient-formula.svg" >
+
+                Where
+                <i>i</i> is the index of the block in the <i>&lt;pattern&gt;</i> set
+                <i>M</i> is the <i>&lt;pattern&gt;</i> set
+                <i>y</i> is the relative y coordinate of the block relative to the selected area
+                <i>h</i> is the height of the selected area
+                <i>s</i> is the randomly chosen vertical offset based on <i>[drippage]</i> value
+                <i>b</i> is the <i>&lt;blur&gt;</i> value
+                <i>r</i> is a random number in the interval of [-0.5, 0.5)
+
+
+
             </p>
 
             <a class="fancy-button" href="" >Try Gradient</a>

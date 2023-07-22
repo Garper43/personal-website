@@ -85,4 +85,15 @@ a {
     right: 5em;
     width: 10em;
 }
+
+#project-github-link {
+    position: absolute;
+    bottom: 2em;
+    left: 5em;
+    width: 10em;
+}
+
+#project-github-link img {
+    height: 5em;
+}
   

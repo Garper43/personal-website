@@ -87,7 +87,7 @@ i {
 #project-github-link {
     position: relative;
     left: 5em;
-    bottom: -15em
+    bottom: -15em;
 }
 
 #project-github-link img {
@@ -107,6 +107,8 @@ i {
     margin: 0.7em;
     text-decoration: none;
     width: max-content;
+
+    display: none;
 }
 
 .green-btn8:hover {
@@ -127,6 +129,8 @@ i {
     color: white;
     border-radius: 0.3em;
     transition: 200ms;
+
+    display: none;
 }
 
 .fancy-button:hover {
